@@ -1,9 +1,9 @@
 # Web API REST
 Esta API tem a função de disponibilizar as funcionalidades de criar, ler, editar e deletar médicos e pacientes. A API se comunica com o SGBD **Microsoft SQL Server**.
 
-## Documentação da API
+## 📖 Documentação da API
 
-### Médicos
+### 🧑‍⚕️ Médicos
 
 #### 1. Retorna todos os médicos
 
@@ -68,7 +68,7 @@ DELETE /api/medicos/${id}
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `int` | **Obrigatório**. O ID do médico que você quer deletar|
 
-### Pacientes
+### 👤 Pacientes
 
 #### 1. Retorna todos os pacientes
 
@@ -132,5 +132,5 @@ DELETE /api/pacientes/${id}
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `int` | **Obrigatório**. O ID do paciente que você quer deletar|
 
-### Informações adicionais
-Esta API utiliza **cache** no repositório de médico, após fazer um ```GET /api/medicos``` o sistema cria um cache para médicos, fazendo com que não seja mais necessário consultar o SGBD e esperar a resposta dele, tudo fica armazenado junto ao repositório do médico, com isso o tempo de consulta é diminuído drasticamente, provendo mais eficiência ao sistema. Porém, quando forem utilizados os seguintes métodos em médicos: _POST, PUT e DELETE_, o cache é **zerado** e somente irá ser refeito após uma nova consulta _GET /api/medicos_
+### ℹ️ Informações adicionais
+Esta API utiliza **cache** no repositório de médico, após fazer um `GET /api/medicos` o sistema cria um cache para médicos, fazendo com que não seja mais necessário consultar o SGBD e esperar a resposta dele, tudo fica armazenado junto ao repositório do médico, com isso o tempo de consulta é diminuído drasticamente, provendo mais eficiência ao sistema. Porém, quando forem utilizados os seguintes métodos em médicos: `POST, PUT e DELETE`, o cache é **zerado** e somente irá ser refeito após uma nova consulta `GET /api/medicos`.
