@@ -61,7 +61,7 @@ _(deve-se informar o código do médico a ser alterado tanto no endpoint quanto 
 #### 5. Deletar um médico
 
 ```http
-DEL /api/medicos/${id}
+DELETE /api/medicos/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
